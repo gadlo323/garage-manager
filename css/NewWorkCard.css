@@ -1,0 +1,140 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@500&family=Frank+Ruhl+Libre&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital@1&family=Secular+One&family=Varela+Round&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #11A88F;
+    /*font-family: 'David Libre', serif;*/
+    font-family: 'Varela Round', sans-serif;
+    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+   
+}
+.container {
+    margin: 0 auto;
+    position: relative;
+}
+.labl {
+    text-align: center;
+   
+}
+
+.card-title1 {
+    text-align: center;
+    font-size: 50px;
+    color: cadetblue;
+    font-family: 'Varela Round', sans-serif;
+   
+}
+select.form-control {
+    height: auto !important;
+    padding: .6rem .8rem calc(.6rem + 1px) .8rem !important;
+}
+
+.form-group label {
+    float: right;
+    color: #ff0844;
+}
+.form-control {
+    font-size: 20px;
+}
+.description {
+    font-size: 20px;
+    font-weight:600;
+    width:90%;
+}
+
+.card {
+    margin-top: 1em;
+}
+
+/* IMG displaying */
+.person-card {
+    margin-top: 5em;
+    padding-top: 5em;
+}
+
+    .person-card .card-title {
+        text-align: center;
+    }
+
+    .person-card .person-img {
+        width: 10em;
+        position: absolute;
+        top: -5em;
+        left: 50%;
+        margin-left: -5em;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: white;
+    }
+.btndiv{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+.repiarBtn {
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 20px;
+    color:white;
+    border:none;
+    border-radius:10px;
+}
+.opencard {
+    background-image: linear-gradient(to right, #0acffe 0%, #495aff 100%);
+    color:black;
+}
+.closecard {
+    background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%);
+    color:red;
+}
+
+
+
+.form-control {
+    border: none;
+    border-bottom: 1.5px solid black;
+}
+    .form-control:focus {
+        
+        border-color:  red;
+    }
+    /* ANIMATIONS ================ */
+    @-webkit-keyframes inputHighlighter {
+        from {
+        background: #5264AE;
+    }
+
+    to {
+        width: 0;
+        background: transparent;
+    }
+}
+
+
+.svg {
+    position: absolute;
+    top:0%;
+    right: 0%;
+}
+
+    .svg svg {
+        animation: go 5s linear infinite;
+    }
+
+@keyframes go {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(-1600px);
+    }
+}
+
+   

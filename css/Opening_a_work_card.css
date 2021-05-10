@@ -1,0 +1,121 @@
+﻿/*Global code*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    animation: opaning 1.5s ease-in-out;
+   
+}
+
+h1 {
+    font-size: 25px;
+}
+
+li,
+button,
+label,
+input,
+a,
+p {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4, h5 {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #2c2c2c;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Vibes",sans-serif;
+}
+
+@keyframes opaning {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+/*Global code end*/
+
+header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    -webkit-box-shadow: 0px 13px 9px -3px rgba(0,0,0,0.28);
+    -moz-box-shadow: 0px 13px 9px -3px rgba(0,0,0,0.28);
+    box-shadow: 0px 13px 9px -3px rgba(0,0,0,0.28);
+    background-color:springgreen;
+    min-height:10vh;
+    width:100%;
+}
+
+.svg {
+    position: absolute;
+    display: block;
+    top: 0%;
+    right: 0%;
+}
+
+    .svg svg {
+        animation: go 7s ease-out infinite;
+    }
+.button-work {
+  
+  
+    
+}
+.btn {
+    padding: 5px;
+    border: 0.5px solid black;
+    margin: 10px;
+    color:whitesmoke;
+    background-color:rgba(77, 231, 61,0.8);
+}
+section{
+    min-height:90vh;
+    background-color:chocolate;
+}
+
+@keyframes go {
+    from {
+        transform: translateX(50px);
+    }
+
+    to {
+        transform: translateX(-1600px);
+    }
+}

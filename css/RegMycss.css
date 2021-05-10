@@ -1,0 +1,23 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Cousine:ital@1&family=Secular+One&family=Varela+Round&display=swap');
+body {
+    padding: 20px;
+    font-family: 'Varela Round', sans-serif !important;
+}
+
+.image-container {
+    background-image: url("../../imegas/login/background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.form-control {
+    font-size: 20px !important;
+    padding: 10px 20px !important;
+    border: 3px solid #EB5E28 !important;
+    border-radius:25px !important;
+    
+}
+.control {
+    font-size: 20px !important;
+    border-radius: 30px !important;
+    outline:none;
+}

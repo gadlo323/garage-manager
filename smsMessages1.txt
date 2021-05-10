@@ -1,0 +1,4 @@
+﻿ שלום <%UserName%>
+מ.ר  <%licensePlate%> מוכן
+תודה על הסבלנות
+ <%nameGarage%>  <%garagePhone%>

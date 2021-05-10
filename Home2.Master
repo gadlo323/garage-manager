@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home2.master.cs" Inherits="GargeManger.Home2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+      <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+    <link rel="shortcut icon" href="imegas/logos/icons8-garage.png"  type="image/x-icon" />
+  <!-- css -->
+ 
+    <link href="css/bootstrap.css" rel="stylesheet" />
+  <link href="css/bootstrap-responsive.css" rel="stylesheet" />
+  <link href="css/fancybox/jquery.fancybox.css" rel="stylesheet">
+  <link href="css/jcarousel.css" rel="stylesheet" />
+  <link href="css/flexslider.css" rel="stylesheet" />
+    <link href="css/Style.css" rel="stylesheet" />
+    
+      <!-- Theme skin -->
+  <link href="skins/default.css" rel="stylesheet" />
+ 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+</head>
+<body>
+   
+   <div id="wrapper" dir="rtl">
+    <!-- start header -->
+    <header >
+        <div class="row" dir="ltr">
+          <div class="span4" style="margin-top:-39px">
+            <div class="logo">
+              <a href="homepage.aspx"><img width="200" src="imegas/logos/logo_size_web.jpg" alt="" class="logo" /></a>
+            </div>
+          </div>
+          <div class="span8">
+            <div class="navbar navbar-static-top">
+              <div class="navigation">
+                <nav>
+                  <ul class="nav topnav">
+                    <li >
+                        <a href="conect.aspx">צור קשר </a>
+                      
+                    </li>
+                   <li>
+                      <a href="AboutUsaspx.aspx">אודתנו</></a> 
+                    </li>
+                   
+                    <li class="dropdown">
+                      <a href="#">התחברות <i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="Login.aspx">מנהל מוסך</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">הרשמה<i class="icon-angle-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="registraion.aspx">מנהל מוסך</a></li>
+                      
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="homepage.aspx">דף-הבית</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- end navigation -->
+            </div>
+          </div>
+        </div>
+    </header>
+         </div>
+    <!-- end header -->
+    
+            <asp:ContentPlaceHolder ID="maincontein" runat="server">
+            </asp:ContentPlaceHolder>
+    
+     <!-- javascript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+
+  <script src="js/jcarousel/jquery.jcarousel.min.js"></script>
+  <script src="js/jquery.fancybox.pack.js"></script>
+  <script src="js/jquery.fancybox-media.js"></script>
+  <script src="js/google-code-prettify/prettify.js"></script>
+  <script src="js/portfolio/jquery.quicksand.js"></script>
+  <script src="js/portfolio/setting.js"></script>
+  <script src="js/jquery.flexslider.js"></script>
+  <script src="js/jquery.nivo.slider.js"></script>
+  <script src="js/jquery.ba-cond.min.js"></script>
+  <script src="js/jquery.slitslider.js"></script>
+  <script src="js/animate.js"></script>
+
+  <!-- Template Custom JavaScript File -->
+  <script src="js/custom.js"></script>
+  
+</body>
+</html>

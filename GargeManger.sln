@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GargeManger", "GargeManger.csproj", "{D20FE3BF-9964-4EFF-AF17-0DCB3ECCFDC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D20FE3BF-9964-4EFF-AF17-0DCB3ECCFDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20FE3BF-9964-4EFF-AF17-0DCB3ECCFDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20FE3BF-9964-4EFF-AF17-0DCB3ECCFDC2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20FE3BF-9964-4EFF-AF17-0DCB3ECCFDC2}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E05E12A9-8950-479A-8EFB-EA9F01D5C9D8}
+	EndGlobalSection
+EndGlobal

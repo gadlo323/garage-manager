@@ -1,0 +1,1918 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D20FE3BF-9964-4EFF-AF17-0DCB3ECCFDC2}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GargeManger</RootNamespace>
+    <AssemblyName>GargeManger</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>SecurityRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutUsaspx.aspx" />
+    <Content Include="abouus\set-of-tool-wrench-162553.jpg" />
+    <Content Include="abouus\smart-home-3096224_1920.jpg" />
+    <Content Include="abouus\speed-car-vehicle-drive-104836.jpeg" />
+    <Content Include="abouus\support_main.png" />
+    <Content Include="abouus\update_main.png" />
+    <Content Include="abouus\ניהול.jpg" />
+    <Content Include="AddCustomer.aspx" />
+    <Content Include="AddEmployee.aspx" />
+    <Content Include="addPartToBill.aspx" />
+    <Content Include="Admin2HomePage.aspx" />
+    <Content Include="BillingCustomer.aspx" />
+    <Content Include="bin\GargeManger.dll" />
+    <Content Include="bin\GargeManger.pdb" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\roslyn\csc.exe" />
+    <Content Include="bin\roslyn\csi.exe" />
+    <Content Include="bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="bin\roslyn\System.AppContext.dll" />
+    <Content Include="bin\roslyn\System.Collections.Immutable.dll" />
+    <Content Include="bin\roslyn\System.Console.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="bin\roslyn\System.Diagnostics.StackTrace.dll" />
+    <Content Include="bin\roslyn\System.IO.Compression.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.dll" />
+    <Content Include="bin\roslyn\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.IO.Pipes.dll" />
+    <Content Include="bin\roslyn\System.Reflection.Metadata.dll" />
+    <Content Include="bin\roslyn\System.Security.AccessControl.dll" />
+    <Content Include="bin\roslyn\System.Security.Claims.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="bin\roslyn\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="bin\roslyn\System.Security.Principal.Windows.dll" />
+    <Content Include="bin\roslyn\System.Text.Encoding.CodePages.dll" />
+    <Content Include="bin\roslyn\System.ValueTuple.dll" />
+    <Content Include="bin\roslyn\System.Xml.ReaderWriter.dll" />
+    <Content Include="bin\roslyn\System.Xml.XmlDocument.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.dll" />
+    <Content Include="bin\roslyn\System.Xml.XPath.XDocument.dll" />
+    <Content Include="bin\roslyn\vbc.exe" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe" />
+    <Content Include="bin\WhatsAppApi.dll" />
+    <Content Include="Calendar\examples\background-events.html" />
+    <Content Include="Calendar\examples\daygrid-views.html" />
+    <Content Include="Calendar\examples\external-dragging-2cals.html" />
+    <Content Include="Calendar\examples\external-dragging-builtin.html" />
+    <Content Include="Calendar\examples\full-height.html" />
+    <Content Include="Calendar\examples\google-calendar.html" />
+    <Content Include="Calendar\examples\json.html" />
+    <Content Include="Calendar\examples\js\theme-chooser.js" />
+    <Content Include="Calendar\examples\list-sticky-header.html" />
+    <Content Include="Calendar\examples\list-views.html" />
+    <Content Include="Calendar\examples\locales.html" />
+    <Content Include="Calendar\examples\month-view.html" />
+    <Content Include="Calendar\examples\natural-height.html" />
+    <Content Include="Calendar\examples\php\get-events.php" />
+    <Content Include="Calendar\examples\php\get-time-zones.php" />
+    <Content Include="Calendar\examples\php\utils.php" />
+    <Content Include="Calendar\examples\rrule.html" />
+    <Content Include="Calendar\examples\selectable.html" />
+    <Content Include="Calendar\examples\theming.html" />
+    <Content Include="Calendar\examples\time-zones.html" />
+    <Content Include="Calendar\examples\timegrid-sticky-header.html" />
+    <Content Include="Calendar\examples\timegrid-views-hscroll.html" />
+    <Content Include="Calendar\examples\timegrid-views.html" />
+    <Content Include="Calendar\examples\week-numbers.html" />
+    <Content Include="Calendar\lib\locales-all.js" />
+    <Content Include="Calendar\lib\locales-all.min.js" />
+    <Content Include="Calendar\lib\locales\af.js" />
+    <Content Include="Calendar\lib\locales\ar-dz.js" />
+    <Content Include="Calendar\lib\locales\ar-kw.js" />
+    <Content Include="Calendar\lib\locales\ar-ly.js" />
+    <Content Include="Calendar\lib\locales\ar-ma.js" />
+    <Content Include="Calendar\lib\locales\ar-sa.js" />
+    <Content Include="Calendar\lib\locales\ar-tn.js" />
+    <Content Include="Calendar\lib\locales\ar.js" />
+    <Content Include="Calendar\lib\locales\az.js" />
+    <Content Include="Calendar\lib\locales\bg.js" />
+    <Content Include="Calendar\lib\locales\bs.js" />
+    <Content Include="Calendar\lib\locales\ca.js" />
+    <Content Include="Calendar\lib\locales\cs.js" />
+    <Content Include="Calendar\lib\locales\da.js" />
+    <Content Include="Calendar\lib\locales\de.js" />
+    <Content Include="Calendar\lib\locales\el.js" />
+    <Content Include="Calendar\lib\locales\en-au.js" />
+    <Content Include="Calendar\lib\locales\en-gb.js" />
+    <Content Include="Calendar\lib\locales\en-nz.js" />
+    <Content Include="Calendar\lib\locales\es-us.js" />
+    <Content Include="Calendar\lib\locales\es.js" />
+    <Content Include="Calendar\lib\locales\et.js" />
+    <Content Include="Calendar\lib\locales\eu.js" />
+    <Content Include="Calendar\lib\locales\fa.js" />
+    <Content Include="Calendar\lib\locales\fi.js" />
+    <Content Include="Calendar\lib\locales\fr-ca.js" />
+    <Content Include="Calendar\lib\locales\fr-ch.js" />
+    <Content Include="Calendar\lib\locales\fr.js" />
+    <Content Include="Calendar\lib\locales\gl.js" />
+    <Content Include="Calendar\lib\locales\he.js" />
+    <Content Include="Calendar\lib\locales\hi.js" />
+    <Content Include="Calendar\lib\locales\hr.js" />
+    <Content Include="Calendar\lib\locales\hu.js" />
+    <Content Include="Calendar\lib\locales\id.js" />
+    <Content Include="Calendar\lib\locales\is.js" />
+    <Content Include="Calendar\lib\locales\it.js" />
+    <Content Include="Calendar\lib\locales\ja.js" />
+    <Content Include="Calendar\lib\locales\ka.js" />
+    <Content Include="Calendar\lib\locales\kk.js" />
+    <Content Include="Calendar\lib\locales\ko.js" />
+    <Content Include="Calendar\lib\locales\lb.js" />
+    <Content Include="Calendar\lib\locales\lt.js" />
+    <Content Include="Calendar\lib\locales\lv.js" />
+    <Content Include="Calendar\lib\locales\mk.js" />
+    <Content Include="Calendar\lib\locales\ms.js" />
+    <Content Include="Calendar\lib\locales\nb.js" />
+    <Content Include="Calendar\lib\locales\nl.js" />
+    <Content Include="Calendar\lib\locales\nn.js" />
+    <Content Include="Calendar\lib\locales\pl.js" />
+    <Content Include="Calendar\lib\locales\pt-br.js" />
+    <Content Include="Calendar\lib\locales\pt.js" />
+    <Content Include="Calendar\lib\locales\ro.js" />
+    <Content Include="Calendar\lib\locales\ru.js" />
+    <Content Include="Calendar\lib\locales\sk.js" />
+    <Content Include="Calendar\lib\locales\sl.js" />
+    <Content Include="Calendar\lib\locales\sq.js" />
+    <Content Include="Calendar\lib\locales\sr-cyrl.js" />
+    <Content Include="Calendar\lib\locales\sr.js" />
+    <Content Include="Calendar\lib\locales\sv.js" />
+    <Content Include="Calendar\lib\locales\th.js" />
+    <Content Include="Calendar\lib\locales\tr.js" />
+    <Content Include="Calendar\lib\locales\ug.js" />
+    <Content Include="Calendar\lib\locales\uk.js" />
+    <Content Include="Calendar\lib\locales\uz.js" />
+    <Content Include="Calendar\lib\locales\vi.js" />
+    <Content Include="Calendar\lib\locales\zh-cn.js" />
+    <Content Include="Calendar\lib\locales\zh-tw.js" />
+    <Content Include="Calendar\lib\main.css" />
+    <Content Include="Calendar\lib\main.js" />
+    <Content Include="Calendar\lib\main.min.css" />
+    <Content Include="Calendar\lib\main.min.js" />
+    <Content Include="Calendar\LICENSE.txt" />
+    <Content Include="Calendar\MyClanderJS.js" />
+    <Content Include="Calendar\vendor\rrule.js" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="colorlib-regform-2\css\main.css" />
+    <Content Include="colorlib-regform-2\images\bg-heading-02.jpg" />
+    <Content Include="colorlib-regform-2\index.html" />
+    <Content Include="colorlib-regform-2\js\global.js" />
+    <Content Include="colorlib-regform-2\readme.txt" />
+    <Content Include="colorlib-regform-2\vendor\datepicker\daterangepicker.css" />
+    <Content Include="colorlib-regform-2\vendor\datepicker\daterangepicker.js" />
+    <Content Include="colorlib-regform-2\vendor\datepicker\moment.min.js" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\css\font-awesome.css" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\css\font-awesome.min.css" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
+    <Content Include="colorlib-regform-2\vendor\jquery\jquery.js" />
+    <Content Include="colorlib-regform-2\vendor\jquery\jquery.min.js" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\css\material-design-iconic-font.css" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\css\material-design-iconic-font.min.css" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="colorlib-regform-2\vendor\select2\select2.min.css" />
+    <Content Include="colorlib-regform-2\vendor\select2\select2.min.js" />
+    <Content Include="css\AddIPart.css" />
+    <Content Include="css\addPartToCart.css" />
+    <Content Include="css\AdminHomeCss2.css" />
+    <Content Include="css\ChangePassword.css" />
+    <Content Include="css\DataTable.css" />
+    <Content Include="css\employees.css" />
+    <Content Include="css\invoeccss.css" />
+    <Content Include="css\Clook.css" />
+    <Content Include="css\NewWorkCard.css" />
+    <Content Include="css\Opening_a_work_card.css" />
+    <Content Include="css\ProfileAdminSetting.css" />
+    <Content Include="css\RegMycss.css" />
+    <Content Include="css\RepeirJob.css" />
+    <Content Include="css\RestPasswordAdmin.css" />
+    <Content Include="Edit_UserProfile.aspx" />
+    <Content Include="EmailTamplate\EmailVerifcationAgain.html" />
+    <Content Include="EmailTamplate\EmeilVerifyAccount.html" />
+    <Content Include="EmailTamplate\NewCustomerAdd.html" />
+    <Content Include="EmailTamplate\RestPasswordAdmin.html" />
+    <Content Include="employeesaspx.aspx" />
+    <Content Include="error-404.html" />
+    <Content Include="error-500 defult.html" />
+    <Content Include="error-500.html" />
+    <Content Include="GarageSettings.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="imegas\111.jpg" />
+    <Content Include="EmailTamplate\email.png" />
+    <Content Include="imegas\embed-js-error.jpg" />
+    <Content Include="imegas\faviconadmin.ico" />
+    <Content Include="imegas\homePage\logo_size_icon.png" />
+    <Content Include="imegas\homePage\men-1.jpg" />
+    <Content Include="imegas\homePage\pexels-mockupeditorcom.jpg" />
+    <Content Include="imegas\homePage\pexels-office.jpg" />
+    <Content Include="imegas\icons8-help-48.png" />
+    <Content Include="imegas\login\background.jpg" />
+    <Content Include="imegas\login\side_cover.jpg" />
+    <Content Include="imegas\logos\icons8-garage.png" />
+    <Content Include="imegas\logos\logo_size_email.jpg" />
+    <Content Include="imegas\logos\logo_size_email_black.jpg" />
+    <Content Include="imegas\logos\logo_size_icon.jpg" />
+    <Content Include="imegas\logos\logo_size_icon_black.jpg" />
+    <Content Include="imegas\logos\logo_size_web.jpg" />
+    <Content Include="imegas\logos\logo_size_web_black.jpg" />
+    <Content Include="imegas\menBlue.jpg" />
+    <Content Include="imegas\navbarimg\dummies\clients\buik.jpg" />
+    <Content Include="imegas\navbarimg\dummies\clients\cadillac.jpg" />
+    <Content Include="imegas\navbarimg\dummies\clients\cit.jpg" />
+    <Content Include="imegas\navbarimg\dummies\clients\client1.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\client2.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\client3.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\client4.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\client5.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\client6.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\dihatso.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\ISUSUCARS.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\Kia.jpg" />
+    <Content Include="imegas\navbarimg\dummies\clients\MG.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\Opel-Logo.png" />
+    <Content Include="imegas\navbarimg\dummies\clients\prgo.jpg" />
+    <Content Include="imegas\navbarimg\dummies\clients\shevrolet.png" />
+    <Content Include="imegas\noimage.png" />
+    <Content Include="imegas\Preloader_2.gif" />
+    <Content Include="imegas\workMen.jpg" />
+    <Content Include="js\addPartTocart.js" />
+    <Content Include="js\AdminHome2.js" />
+    <Content Include="js\DatableJS\button-html5.js" />
+    <Content Include="js\DatableJS\button-min.js" />
+    <Content Include="js\DatableJS\DataTable_Customer.js" />
+    <Content Include="js\DatableJS\DataTjs.js" />
+    <Content Include="js\DatableJS\pdfmake-min.js" />
+    <Content Include="js\DatableJS\Print.js" />
+    <Content Include="js\DatableJS\TreatmentHistory.js" />
+    <Content Include="js\DatableJS\vfs_fonts.js" />
+    <Content Include="js\RepairJob.js" />
+    <Content Include="js\WorkCard.js" />
+    <Content Include="login\css\forgotpassword.css" />
+    <Content Include="login\images\iconfinder_2_330395.png" />
+    <Content Include="NewPart.aspx" />
+    <Content Include="NewTretmant.aspx" />
+    <Content Include="registraion.aspx" />
+    <Content Include="RegistraionForm\css\bootstrap.min.css" />
+    <Content Include="RegistraionForm\css\demo.css" />
+    <Content Include="RegistraionForm\css\paper-bootstrap-wizard.css" />
+    <Content Include="RegistraionForm\css\themify-icons-demo.css" />
+    <Content Include="RegistraionForm\css\themify-icons.css" />
+    <Content Include="RegistraionForm\img\apple-icon.png" />
+    <Content Include="RegistraionForm\img\default-avatar.jpg" />
+    <Content Include="RegistraionForm\img\favicon.png" />
+    <Content Include="RegistraionForm\img\new_logo.png" />
+    <Content Include="RegistraionForm\img\ok.png" />
+    <Content Include="RegistraionForm\img\paper-1.jpeg" />
+    <Content Include="RegistraionForm\img\paper-2.jpeg" />
+    <Content Include="RegistraionForm\img\paper-3.jpeg" />
+    <Content Include="RegistraionForm\img\tim_80x80.png" />
+    <Content Include="RegistraionForm\img\wizard-create-profile.png" />
+    <Content Include="RegistraionForm\img\wizard-find-desk.png" />
+    <Content Include="RegistraionForm\img\wizard-list-place.png" />
+    <Content Include="RegistraionForm\js\bootstrap.min.js" />
+    <Content Include="RegistraionForm\js\demo.js" />
+    <Content Include="RegistraionForm\js\jquery-2.2.4.min.js" />
+    <Content Include="RegistraionForm\js\jquery.bootstrap.wizard.js" />
+    <Content Include="RegistraionForm\js\jquery.validate.min.js" />
+    <Content Include="RegistraionForm\js\MyJS.js" />
+    <Content Include="RegistraionForm\js\paper-bootstrap-wizard.js" />
+    <Content Include="RepairJob.aspx" />
+    <Content Include="RestPasswordAdmin.aspx" />
+    <Content Include="Shwo_All_Customer.aspx" />
+    <Content Include="smsMessages1.txt" />
+    <Content Include="TreatmentHistory.aspx" />
+    <Content Include="UpdaetUserPassword.aspx" />
+    <Content Include="Userimage\images.png" />
+    <Content Include="Userimage\testimonials-2.jpg" />
+    <Content Include="Userimage\testimonials-3.jpg" />
+    <Content Include="Verification\css\style.css" />
+    <Content Include="Verification\fonts\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="Verification\fonts\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Verification\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Verification\fonts\Montserrat\OFL.txt" />
+    <Content Include="Verification\images\bg-registration-form-7.jpg" />
+    <Content Include="AddCustomerAdmin\css\montserrat-font.css" />
+    <Content Include="AddCustomerAdmin\css\style.css" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\OFL.txt" />
+    <Content Include="RegistraionForm\js\global.js" />
+    <Content Include="conect.aspx" />
+    <Content Include="contactform\contactform.js" />
+    <Content Include="contactform\Readme.txt" />
+    <Content Include="css\AddCustomer.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap-responsive.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\cslider.css" />
+    <Content Include="css\custom-fonts.css" />
+    <Content Include="css\fancybox\blank.gif" />
+    <Content Include="css\fancybox\fancybox_loading.gif" />
+    <Content Include="css\fancybox\fancybox_overlay.png" />
+    <Content Include="css\fancybox\fancybox_sprite.png" />
+    <Content Include="css\fancybox\jquery.fancybox.css" />
+    <Content Include="css\flexslider.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\jcarousel.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\overwrite.css" />
+    <Content Include="css\slitslider.css" />
+    <Content Include="css\Style.css" />
+    <Content Include="css\util.css" />
+    <Content Include="emailverification.aspx" />
+    <Content Include="font\customicon\Icons.svg" />
+    <Content Include="font\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="font\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="font\fontawesome\fontawesome-webfont.svg" />
+    <Content Include="font\montserrat\OFL.txt" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="imegas\big_slide_neswin.mp4" />
+    <Content Include="imegas\close.png" />
+    <Content Include="imegas\contact-bg.jpg" />
+    <Content Include="imegas\elements-bg.jpg" />
+    <Content Include="imegas\envelop.png" />
+    <Content Include="imegas\favicon.ico" />
+    <Content Include="imegas\faviconabout.ico" />
+    <Content Include="imegas\faviconhome.ico" />
+    <Content Include="imegas\faviconlogin.ico" />
+    <Content Include="imegas\faviconmessage.ico" />
+    <Content Include="imegas\faviconreg.ico" />
+    <Content Include="imegas\glass.png" />
+    <Content Include="imegas\hurry-up-bg.jpg" />
+    <Content Include="imegas\icon-google.png" />
+    <Content Include="imegas\icon.png" />
+    <Content Include="imegas\icons8.png" />
+    <Content Include="imegas\img-01.png" />
+    <Content Include="imegas\logo.png" />
+    <Content Include="imegas\men.jpg" />
+    <Content Include="imegas\onlinelogomaker.jpg" />
+    <Content Include="imegas\phone.png" />
+    <Content Include="imegas\speaker-1.jpg" />
+    <Content Include="imegas\speaker-2.jpg" />
+    <Content Include="imegas\speaker-3.jpg" />
+    <Content Include="imegas\speaker-4.jpg" />
+    <Content Include="imegas\speaker-5.jpg" />
+    <Content Include="imegas\speaker-6.jpg" />
+    <Content Include="imegas\speakers-bg.jpg" />
+    <Content Include="imegas\subs-bg.jpg" />
+    <Content Include="imegas\symbol-01.png" />
+    <Content Include="imegas\testimonials-1.jpg" />
+    <Content Include="imegas\testimonials-2.jpg" />
+    <Content Include="imegas\testimonials-3.jpg" />
+    <Content Include="imegas\tickets-bg.jpg" />
+    <Content Include="imegas\workshop.jpg" />
+    <Content Include="imegas\יעוץ.jpg" />
+    <Content Include="imegas\משלוח.jpg" />
+    <Content Include="imegas\שרות1.jpg" />
+    <Content Include="js\animate.js" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Conect_JS.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\google-code-prettify\prettify.css" />
+    <Content Include="js\google-code-prettify\prettify.js" />
+    <Content Include="js\jcarousel\jquery.jcarousel.min.js" />
+    <Content Include="js\jcarousel\setting.js" />
+    <Content Include="js\Jjquery.searchabledropdown-1.0.8.min.js.js" />
+    <Content Include="js\jquery.ba-cond.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.cslider.js" />
+    <Content Include="js\jquery.easing.1.3.js" />
+    <Content Include="js\jquery.fancybox-media.js" />
+    <Content Include="js\jquery.fancybox.pack.js" />
+    <Content Include="js\jquery.flexslider.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.nivo.slider.js" />
+    <Content Include="js\jquery.slitslider.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\portfolio\jquery.quicksand.js" />
+    <Content Include="js\portfolio\setting.js" />
+    <Content Include="js\quicksand\jquery.quicksand.js" />
+    <Content Include="js\quicksand\setting.js" />
+    <Content Include="js\Script1.js" />
+    <Content Include="js\wetaher.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="login\css\main.css" />
+    <Content Include="login\css\style.css" />
+    <Content Include="login\css\util.css" />
+    <Content Include="login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="login\fonts\JosefinSans\OFL.txt" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\icon-font.min.css" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <Content Include="login\images\avatar.png" />
+    <Content Include="login\images\bg-01.jpg" />
+    <Content Include="login\images\icons\favicon.ico" />
+    <Content Include="login\images\icons\map-marker.png" />
+    <Content Include="login\images\img-01.png" />
+    <Content Include="login\images\pic1.jpg" />
+    <Content Include="login\js\main.js" />
+    <Content Include="login\js\map-custom.js" />
+    <Content Include="login\vendor\animate\animate.css" />
+    <Content Include="login\vendor\animsition\css\animsition.css" />
+    <Content Include="login\vendor\animsition\css\animsition.min.css" />
+    <Content Include="login\vendor\animsition\js\animsition.js" />
+    <Content Include="login\vendor\animsition\js\animsition.min.js" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="login\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="login\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="login\vendor\bootstrap\js\popper.js" />
+    <Content Include="login\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="login\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="login\vendor\countdowntime\countdowntime.js" />
+    <Content Include="login\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="login\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="login\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="login\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="login\vendor\daterangepicker\moment.js" />
+    <Content Include="login\vendor\daterangepicker\moment.min.js" />
+    <Content Include="login\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="login\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="login\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="login\vendor\select2\select2.css" />
+    <Content Include="login\vendor\select2\select2.js" />
+    <Content Include="login\vendor\select2\select2.min.css" />
+    <Content Include="login\vendor\select2\select2.min.js" />
+    <Content Include="MessageByAdmiinToUser.txt" />
+    <Content Include="obj\Debug\GargeManger.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\GargeManger.dll" />
+    <Content Include="obj\Debug\GargeManger.pdb" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\VBCSCompiler.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.Build.Tasks.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.CSharp.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.Scripting.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CodeAnalysis.VisualBasic.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.DiaSymReader.Native.amd64.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.DiaSymReader.Native.x86.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.AppContext.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Collections.Immutable.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Console.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Diagnostics.FileVersionInfo.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Diagnostics.StackTrace.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Compression.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.FileSystem.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.FileSystem.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Pipes.AccessControl.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.IO.Pipes.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Reflection.Metadata.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.AccessControl.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Claims.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Algorithms.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Encoding.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.Primitives.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Cryptography.X509Certificates.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Security.Principal.Windows.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Text.Encoding.CodePages.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.ValueTuple.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.ReaderWriter.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XmlDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XPath.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.exe" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\VBCSCompiler.exe" />
+    <Content Include="packages\WhatsAppAPI.15.4.29\lib\net40\WhatsAppApi.dll" />
+    <Content Include="ProfileSettingAdmin.aspx" />
+    <Content Include="skins\blue.css" />
+    <Content Include="skins\default.css" />
+    <Content Include="skins\green.css" />
+    <Content Include="skins\kissme.css" />
+    <Content Include="skins\lime.css" />
+    <Content Include="skins\pink.css" />
+    <Content Include="skins\red.css" />
+    <Content Include="skins\rose.css" />
+    <Content Include="skins\sand.css" />
+    <Content Include="skins\yellow.css" />
+    <Content Include="Stellar-master\css\style.css" />
+    <Content Include="Stellar-master\gulp-tasks\inject.js" />
+    <Content Include="Stellar-master\gulp-tasks\serve.js" />
+    <Content Include="Stellar-master\gulp-tasks\vendors.js" />
+    <Content Include="Stellar-master\gulpfile.js" />
+    <Content Include="Stellar-master\images\auth\lockscreen-bg.jpg" />
+    <Content Include="Stellar-master\images\auth\login-bg.jpg" />
+    <Content Include="Stellar-master\images\auth\register-bg.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_1.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_10.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_11.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_12.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_2.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_3.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_4.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_5.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_6.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_7.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_8.jpg" />
+    <Content Include="Stellar-master\images\carousel\banner_9.jpg" />
+    <Content Include="Stellar-master\images\dashboard\alipay.png" />
+    <Content Include="Stellar-master\images\dashboard\circle.png" />
+    <Content Include="Stellar-master\images\dashboard\circle.svg" />
+    <Content Include="Stellar-master\images\dashboard\img_1.jpg" />
+    <Content Include="Stellar-master\images\dashboard\img_2.jpg" />
+    <Content Include="Stellar-master\images\dashboard\img_3.jpg" />
+    <Content Include="Stellar-master\images\dashboard\img_4.jpg" />
+    <Content Include="Stellar-master\images\dashboard\paypal.png" />
+    <Content Include="Stellar-master\images\faces-clipart\pic-1.png" />
+    <Content Include="Stellar-master\images\faces-clipart\pic-2.png" />
+    <Content Include="Stellar-master\images\faces-clipart\pic-3.png" />
+    <Content Include="Stellar-master\images\faces-clipart\pic-4.png" />
+    <Content Include="Stellar-master\images\faces\face11.jpg" />
+    <Content Include="Stellar-master\images\faces\face12.jpg" />
+    <Content Include="Stellar-master\images\faces\face13.jpg" />
+    <Content Include="Stellar-master\images\faces\face14.jpg" />
+    <Content Include="Stellar-master\images\faces\face15.jpg" />
+    <Content Include="Stellar-master\images\faces\face16.jpg" />
+    <Content Include="Stellar-master\images\faces\face17.jpg" />
+    <Content Include="Stellar-master\images\faces\face18.jpg" />
+    <Content Include="Stellar-master\images\faces\face19.jpg" />
+    <Content Include="Stellar-master\images\faces\face2.jpg" />
+    <Content Include="Stellar-master\images\faces\face20.jpg" />
+    <Content Include="Stellar-master\images\faces\face21.jpg" />
+    <Content Include="Stellar-master\images\faces\face22.jpg" />
+    <Content Include="Stellar-master\images\faces\face23.jpg" />
+    <Content Include="Stellar-master\images\faces\face24.jpg" />
+    <Content Include="Stellar-master\images\faces\face25.jpg" />
+    <Content Include="Stellar-master\images\faces\face26.jpg" />
+    <Content Include="Stellar-master\images\faces\face27.jpg" />
+    <Content Include="Stellar-master\images\faces\face3.jpg" />
+    <Content Include="Stellar-master\images\faces\face4.jpg" />
+    <Content Include="Stellar-master\images\faces\face5.jpg" />
+    <Content Include="Stellar-master\images\faces\face6.jpg" />
+    <Content Include="Stellar-master\images\faces\face7.jpg" />
+    <Content Include="Stellar-master\images\faces\face8.jpg" />
+    <Content Include="Stellar-master\images\faces\face9.jpg" />
+    <Content Include="Stellar-master\images\favicon.png" />
+    <Content Include="Stellar-master\images\file-icons\128\001-interface-1.png" />
+    <Content Include="Stellar-master\images\file-icons\128\002-tool.png" />
+    <Content Include="Stellar-master\images\file-icons\128\003-interface.png" />
+    <Content Include="Stellar-master\images\file-icons\128\004-folder-1.png" />
+    <Content Include="Stellar-master\images\file-icons\128\005-database.png" />
+    <Content Include="Stellar-master\images\file-icons\128\006-record.png" />
+    <Content Include="Stellar-master\images\file-icons\128\007-folder.png" />
+    <Content Include="Stellar-master\images\file-icons\128\008-archive.png" />
+    <Content Include="Stellar-master\images\file-icons\256\001-interface-1.png" />
+    <Content Include="Stellar-master\images\file-icons\256\002-tool.png" />
+    <Content Include="Stellar-master\images\file-icons\256\003-interface.png" />
+    <Content Include="Stellar-master\images\file-icons\256\004-folder-1.png" />
+    <Content Include="Stellar-master\images\file-icons\256\005-database.png" />
+    <Content Include="Stellar-master\images\file-icons\256\006-record.png" />
+    <Content Include="Stellar-master\images\file-icons\256\007-folder.png" />
+    <Content Include="Stellar-master\images\file-icons\256\008-archive.png" />
+    <Content Include="Stellar-master\images\file-icons\512\001-interface-1.png" />
+    <Content Include="Stellar-master\images\file-icons\512\002-tool.png" />
+    <Content Include="Stellar-master\images\file-icons\512\003-interface.png" />
+    <Content Include="Stellar-master\images\file-icons\512\004-folder-1.png" />
+    <Content Include="Stellar-master\images\file-icons\512\005-database.png" />
+    <Content Include="Stellar-master\images\file-icons\512\006-record.png" />
+    <Content Include="Stellar-master\images\file-icons\512\007-folder.png" />
+    <Content Include="Stellar-master\images\file-icons\512\008-archive.png" />
+    <Content Include="Stellar-master\images\file-icons\64\001-interface-1.png" />
+    <Content Include="Stellar-master\images\file-icons\64\002-tool.png" />
+    <Content Include="Stellar-master\images\file-icons\64\003-interface.png" />
+    <Content Include="Stellar-master\images\file-icons\64\004-folder-1.png" />
+    <Content Include="Stellar-master\images\file-icons\64\005-database.png" />
+    <Content Include="Stellar-master\images\file-icons\64\006-record.png" />
+    <Content Include="Stellar-master\images\file-icons\64\007-folder.png" />
+    <Content Include="Stellar-master\images\file-icons\64\008-archive.png" />
+    <Content Include="Stellar-master\images\lightbox\play-button.png" />
+    <Content Include="Stellar-master\images\lightbox\thumb-v-v-1.jpg" />
+    <Content Include="Stellar-master\images\lightbox\thumb-v-v-2.jpg" />
+    <Content Include="Stellar-master\images\lightbox\thumb-v-y-1.jpg" />
+    <Content Include="Stellar-master\images\lightbox\thumb-v-y-2.jpg" />
+    <Content Include="Stellar-master\images\logo-light.svg" />
+    <Content Include="Stellar-master\images\logo-mini.svg" />
+    <Content Include="Stellar-master\images\logo.svg" />
+    <Content Include="Stellar-master\images\samples\1280x768\1.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\10.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\11.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\12.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\13.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\14.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\15.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\2.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\3.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\4.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\5.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\6.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\7.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\8.jpg" />
+    <Content Include="Stellar-master\images\samples\1280x768\9.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\1.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\10.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\11.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\12.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\13.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\14.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\15.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\2.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\3.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\4.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\5.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\6.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\7.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\8.jpg" />
+    <Content Include="Stellar-master\images\samples\300x300\9.jpg" />
+    <Content Include="Stellar-master\images\screenshots\default.jpg" />
+    <Content Include="Stellar-master\images\social_icons\facebook-bg.svg" />
+    <Content Include="Stellar-master\images\social_icons\instagram-bg.svg" />
+    <Content Include="Stellar-master\images\social_icons\twitter-bg.svg" />
+    <Content Include="Stellar-master\images\sprites\blue.png" />
+    <Content Include="Stellar-master\images\sprites\dark.png" />
+    <Content Include="Stellar-master\images\sprites\flag.png" />
+    <Content Include="Stellar-master\images\sprites\green.png" />
+    <Content Include="Stellar-master\images\sprites\jsgrid-icons.png" />
+    <Content Include="Stellar-master\images\sprites\red.png" />
+    <Content Include="Stellar-master\images\sprites\yellow.png" />
+    <Content Include="Stellar-master\index.html" />
+    <Content Include="Stellar-master\js\chart.js" />
+    <Content Include="Stellar-master\js\chartist.js" />
+    <Content Include="Stellar-master\js\dashboard.js" />
+    <Content Include="Stellar-master\js\jquery-3.3.1.min.js" />
+    <Content Include="Stellar-master\js\misc.js" />
+    <Content Include="Stellar-master\js\off-canvas.js" />
+    <Content Include="Stellar-master\js\select2.js" />
+    <Content Include="Stellar-master\js\typeahead.js" />
+    <Content Include="Stellar-master\pages\charts\chartist.html" />
+    <Content Include="Stellar-master\pages\forms\basic_elements.html" />
+    <Content Include="Stellar-master\pages\icons\simple-line-icons.html" />
+    <Content Include="Stellar-master\pages\samples\blank-page.html" />
+    <Content Include="Stellar-master\pages\samples\login.html" />
+    <Content Include="Stellar-master\pages\samples\register.html" />
+    <Content Include="Stellar-master\pages\tables\basic-table.html" />
+    <Content Include="Stellar-master\pages\ui-features\buttons.html" />
+    <Content Include="Stellar-master\pages\ui-features\typography.html" />
+    <Content Include="Stellar-master\partials\_footer.html" />
+    <Content Include="Stellar-master\partials\_navbar.html" />
+    <Content Include="Stellar-master\partials\_sidebar.html" />
+    <Content Include="Stellar-master\screenshot.jpg" />
+    <Content Include="Stellar-master\vendors\chart.js\Chart.min.js" />
+    <Content Include="Stellar-master\vendors\chartist\chartist.min.css" />
+    <Content Include="Stellar-master\vendors\chartist\chartist.min.js" />
+    <Content Include="Stellar-master\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Stellar-master\vendors\daterangepicker\daterangepicker.css" />
+    <Content Include="Stellar-master\vendors\daterangepicker\daterangepicker.js" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ad.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ae.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\af.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ag.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ai.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\al.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\am.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ao.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\aq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ar.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\as.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\at.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\au.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\aw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ax.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\az.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ba.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\be.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\br.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bs.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\by.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\bz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ca.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ch.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ci.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ck.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\co.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cx.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\cz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\de.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\dj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\dk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\dm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\do.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\dz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ec.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ee.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\eg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\eh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\er.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\es-ct.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\es.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\et.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\eu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\fi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\fj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\fk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\fm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\fo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\fr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ga.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gb-eng.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gb-nir.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gb-sct.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gb-wls.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ge.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gs.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\gy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\hk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\hm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\hn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\hr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ht.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\hu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\id.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ie.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\il.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\im.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\in.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\io.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\iq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ir.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\is.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\it.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\je.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\jm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\jo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\jp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ke.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ki.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\km.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ky.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\kz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\la.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\li.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ls.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\lv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ly.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ma.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\md.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\me.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ml.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ms.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mx.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\my.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\mz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\na.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\nc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ne.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\nf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ng.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ni.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\nl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\no.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\np.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\nr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\nu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\nz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\om.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pa.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pe.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ph.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ps.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\pw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\py.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\qa.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\re.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ro.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\rs.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ru.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\rw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sa.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\se.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\si.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\so.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ss.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\st.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sx.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\sz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\td.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\th.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\to.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\tz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ua.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ug.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\um.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\un.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\us.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\uy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\uz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\va.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\vc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ve.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\vg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\vi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\vn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\vu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\wf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ws.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\xk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\ye.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\yt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\za.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\zm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\1x1\zw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ad.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ae.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\af.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ag.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ai.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\al.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\am.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ao.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\aq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ar.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\as.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\at.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\au.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\aw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ax.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\az.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ba.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\be.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\br.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bs.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\by.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\bz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ca.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ch.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ci.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ck.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\co.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cx.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\cz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\de.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\dj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\dk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\dm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\do.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\dz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ec.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ee.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\eg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\eh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\er.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\es-ct.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\es.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\et.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\eu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\fi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\fj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\fk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\fm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\fo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\fr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ga.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gb-eng.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gb-nir.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gb-sct.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gb-wls.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ge.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gs.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\gy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\hk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\hm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\hn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\hr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ht.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\hu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\id.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ie.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\il.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\im.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\in.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\io.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\iq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ir.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\is.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\it.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\je.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\jm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\jo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\jp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ke.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ki.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\km.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ky.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\kz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\la.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\li.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ls.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\lv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ly.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ma.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\md.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\me.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ml.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mo.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mp.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mq.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ms.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mx.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\my.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\mz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\na.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\nc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ne.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\nf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ng.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ni.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\nl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\no.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\np.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\nr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\nu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\nz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\om.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pa.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pe.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ph.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ps.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\pw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\py.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\qa.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\re.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ro.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\rs.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ru.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\rw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sa.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sb.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sd.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\se.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sh.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\si.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\so.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ss.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\st.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sx.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\sz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\td.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\th.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tj.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tl.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\to.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tr.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tv.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tw.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\tz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ua.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ug.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\um.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\un.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\us.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\uy.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\uz.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\va.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\vc.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ve.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\vg.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\vi.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\vn.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\vu.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\wf.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ws.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\xk.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\ye.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\yt.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\za.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\zm.svg" />
+    <Content Include="Stellar-master\vendors\flag-icon-css\flags\4x3\zw.svg" />
+    <Content Include="Stellar-master\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Stellar-master\vendors\moment\moment.js" />
+    <Content Include="Stellar-master\vendors\moment\moment.min.js" />
+    <Content Include="Stellar-master\vendors\progressbar.js\progressbar.min.js" />
+    <Content Include="Stellar-master\vendors\select2-bootstrap-theme\select2-bootstrap.min.css" />
+    <Content Include="Stellar-master\vendors\select2\select2.min.css" />
+    <Content Include="Stellar-master\vendors\select2\select2.min.js" />
+    <Content Include="Stellar-master\vendors\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Stellar-master\vendors\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Stellar-master\vendors\twbs-pagination\jquery.twbsPagination.min.js" />
+    <Content Include="Stellar-master\vendors\typeahead.js\typeahead.bundle.min.js" />
+    <Content Include="Termsofuse.aspx" />
+    <Content Include="vendor\animate\animate.css" />
+    <Content Include="vendor\animsition\css\animsition.css" />
+    <Content Include="vendor\animsition\css\animsition.min.css" />
+    <Content Include="vendor\animsition\js\animsition.js" />
+    <Content Include="vendor\animsition\js\animsition.min.js" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\bootstrap\js\popper.js" />
+    <Content Include="vendor\bootstrap\js\popper.min.js" />
+    <Content Include="vendor\bootstrap\js\tooltip.js" />
+    <Content Include="vendor\countdowntime\countdowntime.js" />
+    <Content Include="vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="vendor\daterangepicker\moment.js" />
+    <Content Include="vendor\daterangepicker\moment.min.js" />
+    <Content Include="vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="vendor\select2\select2.css" />
+    <Content Include="vendor\select2\select2.js" />
+    <Content Include="vendor\select2\select2.min.css" />
+    <Content Include="vendor\select2\select2.min.js" />
+    <Content Include="vendor\tilt\tilt.jquery.min.js" />
+    <Content Include="VerifyNewUser.txt" />
+    <Content Include="WorkCard.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutUsaspx.aspx.cs">
+      <DependentUpon>AboutUsaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUsaspx.aspx.designer.cs">
+      <DependentUpon>AboutUsaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddCustomer.aspx.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.aspx.designer.cs">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AddEmployee.aspx.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEmployee.aspx.designer.cs">
+      <DependentUpon>AddEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addPartToBill.aspx.cs">
+      <DependentUpon>addPartToBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addPartToBill.aspx.designer.cs">
+      <DependentUpon>addPartToBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin2HomePage.aspx.cs">
+      <DependentUpon>Admin2HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin2HomePage.aspx.designer.cs">
+      <DependentUpon>Admin2HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\CartModel.cs" />
+    <Compile Include="App_Code\CityModel.cs" />
+    <Compile Include="App_Code\CustomerModel.cs" />
+    <Compile Include="App_Code\EmailBLL.cs" />
+    <Compile Include="App_Code\EmployeModel.cs" />
+    <Compile Include="App_Code\EventsModel.cs" />
+    <Compile Include="App_Code\ManufacthreModel.cs" />
+    <Compile Include="App_Code\ModelClass.cs" />
+    <Compile Include="App_Code\PartModel.cs" />
+    <Compile Include="App_Code\RepairJobl.cs" />
+    <Compile Include="App_Code\SmsSender.cs" />
+    <Compile Include="App_Code\Sticky_Note.cs" />
+    <Compile Include="App_Code\TypeModel.cs" />
+    <Compile Include="App_Code\TypeTretmant.cs" />
+    <Compile Include="App_Code\RestClass.cs" />
+    <Compile Include="App_Code\VehicleModel.cs" />
+    <Compile Include="BillingCustomer.aspx.cs">
+      <DependentUpon>BillingCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillingCustomer.aspx.designer.cs">
+      <DependentUpon>BillingCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="conect.aspx.cs">
+      <DependentUpon>conect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="conect.aspx.designer.cs">
+      <DependentUpon>conect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerInfo.cs" />
+    <Compile Include="DbListAdapter.cs" />
+    <Compile Include="Edit_UserProfile.aspx.cs">
+      <DependentUpon>Edit_UserProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Edit_UserProfile.aspx.designer.cs">
+      <DependentUpon>Edit_UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="emailverification.aspx.cs">
+      <DependentUpon>emailverification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="emailverification.aspx.designer.cs">
+      <DependentUpon>emailverification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="employeesaspx.aspx.cs">
+      <DependentUpon>employeesaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="employeesaspx.aspx.designer.cs">
+      <DependentUpon>employeesaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GarageSettings.aspx.cs">
+      <DependentUpon>GarageSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GarageSettings.aspx.designer.cs">
+      <DependentUpon>GarageSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Garge.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Home1.Master.cs">
+      <DependentUpon>Home1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home1.Master.designer.cs">
+      <DependentUpon>Home1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Home2.Master.cs">
+      <DependentUpon>Home2.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home2.Master.designer.cs">
+      <DependentUpon>Home2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewAdmin.Master.cs">
+      <DependentUpon>NewAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewAdmin.Master.designer.cs">
+      <DependentUpon>NewAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewPart.aspx.cs">
+      <DependentUpon>NewPart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewPart.aspx.designer.cs">
+      <DependentUpon>NewPart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewTretmant.aspx.cs">
+      <DependentUpon>NewTretmant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewTretmant.aspx.designer.cs">
+      <DependentUpon>NewTretmant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileSettingAdmin.aspx.cs">
+      <DependentUpon>ProfileSettingAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProfileSettingAdmin.aspx.designer.cs">
+      <DependentUpon>ProfileSettingAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registraion.aspx.cs">
+      <DependentUpon>registraion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registraion.aspx.designer.cs">
+      <DependentUpon>registraion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RepairJob.aspx.cs">
+      <DependentUpon>RepairJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RepairJob.aspx.designer.cs">
+      <DependentUpon>RepairJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RestPasswordAdmin.aspx.cs">
+      <DependentUpon>RestPasswordAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RestPasswordAdmin.aspx.designer.cs">
+      <DependentUpon>RestPasswordAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shwo_All_Customer.aspx.cs">
+      <DependentUpon>Shwo_All_Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shwo_All_Customer.aspx.designer.cs">
+      <DependentUpon>Shwo_All_Customer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sql_class.cs" />
+    <Compile Include="Termsofuse.aspx.cs">
+      <DependentUpon>Termsofuse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Termsofuse.aspx.designer.cs">
+      <DependentUpon>Termsofuse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TreatmentHistory.aspx.cs">
+      <DependentUpon>TreatmentHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TreatmentHistory.aspx.designer.cs">
+      <DependentUpon>TreatmentHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdaetUserPassword.aspx.cs">
+      <DependentUpon>UpdaetUserPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdaetUserPassword.aspx.designer.cs">
+      <DependentUpon>UpdaetUserPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkCard.aspx.cs">
+      <DependentUpon>WorkCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkCard.aspx.designer.cs">
+      <DependentUpon>WorkCard.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Home1.Master" />
+    <Content Include="Home2.Master" />
+    <Content Include="bin\GargeManger.dll.config" />
+    <Content Include="bin\roslyn\csc.exe.config" />
+    <Content Include="bin\roslyn\csc.rsp" />
+    <Content Include="bin\roslyn\csi.exe.config" />
+    <Content Include="bin\roslyn\csi.rsp" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.Managed.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\vbc.exe.config" />
+    <Content Include="bin\roslyn\vbc.rsp" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="bin\WhatsAppApi.dll.refresh" />
+    <Content Include="font\customicon\Icons.eot" />
+    <Content Include="font\customicon\Icons.ttf" />
+    <Content Include="font\customicon\Icons.woff" />
+    <Content Include="font\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="font\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="font\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="font\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="font\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="font\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="font\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="font\font-awesome-4.7.0\less\core.less" />
+    <Content Include="font\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="font\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="font\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="font\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="font\font-awesome-4.7.0\less\list.less" />
+    <Content Include="font\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="font\font-awesome-4.7.0\less\path.less" />
+    <Content Include="font\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="font\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="font\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="font\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="font\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="font\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="font\fontawesome\fontawesome-webfont.eot" />
+    <Content Include="font\fontawesome\fontawesome-webfont.ttf" />
+    <Content Include="font\fontawesome\fontawesome-webfont.woff" />
+    <Content Include="font\fontawesome\FontAwesome.otf" />
+    <Content Include="font\montserrat\Montserrat-Black.ttf" />
+    <Content Include="font\montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-Bold.ttf" />
+    <Content Include="font\montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="font\montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="font\montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="font\montserrat\Montserrat-Light.ttf" />
+    <Content Include="font\montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="font\montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="font\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="font\montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="font\montserrat\Montserrat-Thin.ttf" />
+    <Content Include="font\montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="login\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="login\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-Bold.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-BoldItalic.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-Italic.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-Light.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-LightItalic.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-Regular.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-SemiBold.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-SemiBoldItalic.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-Thin.ttf" />
+    <Content Include="login\fonts\JosefinSans\JosefinSans-ThinItalic.ttf" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.eot" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.ttf" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff" />
+    <Content Include="login\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <Content Include="login\fonts\OpenSans\OpenSans-Bold.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-BoldItalic.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-ExtraBold.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-ExtraBoldItalic.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-Italic.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-Light.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-LightItalic.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-Regular.otf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-Regular.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-SemiBold.ttf" />
+    <Content Include="login\fonts\OpenSans\OpenSans-SemiBoldItalic.ttf" />
+    <Content Include="login\fonts\oswald\Oswald-Bold.ttf" />
+    <Content Include="login\fonts\oswald\Oswald-ExtraLight.ttf" />
+    <Content Include="login\fonts\oswald\Oswald-Light.ttf" />
+    <Content Include="login\fonts\oswald\Oswald-Medium.ttf" />
+    <Content Include="login\fonts\oswald\Oswald-Regular.ttf" />
+    <Content Include="login\fonts\oswald\Oswald-SemiBold.ttf" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="login\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="obj\Debug\build.force" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\GargeManger.csproj.CopyComplete" />
+    <Content Include="obj\Debug\GargeManger.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\GargeManger.csprojAssemblyReference.cache" />
+    <Content Include="obj\Release\GargeManger.csproj.CoreCompileInputs.cache" />
+    <Content Include="NewAdmin.Master" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="AddCustomerAdmin\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Black.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-BlackItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Bold.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-BoldItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-ExtraBold.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-ExtraBoldItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-ExtraLight.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-ExtraLightItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Italic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Light.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-LightItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Medium.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-MediumItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Regular.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-SemiBoldItalic.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-Thin.ttf" />
+    <Content Include="AddCustomerAdmin\fonts\Montserrat\Montserrat-ThinItalic.ttf" />
+    <Content Include="Verification\css\style.css.map" />
+    <Content Include="Verification\css\style.scss" />
+    <Content Include="Verification\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Verification\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Verification\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Verification\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Verification\fonts\Montserrat\Montserrat-Bold.ttf" />
+    <Content Include="Verification\fonts\Montserrat\Montserrat-Regular.ttf" />
+    <Content Include="Verification\fonts\Montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="js\DatableJS\datatablemin.js" />
+    <Content Include="Calendar\examples\json\events.json" />
+    <Content Include="Calendar\README.md" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\fonts\fontawesome-webfont.eot" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\fonts\fontawesome-webfont.ttf" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\fonts\fontawesome-webfont.woff2" />
+    <Content Include="colorlib-regform-2\vendor\font-awesome-4.7\fonts\FontAwesome.otf" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="colorlib-regform-2\vendor\mdi-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <None Include="packages.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\.signature.p7s" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.Extensions.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net45\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\app.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\app.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\web.config.install.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\content\net46\web.config.uninstall.xdt" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0.nupkg" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\net45\install.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\net45\uninstall.ps1" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\Roslyn45\VBCSCompiler.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\csi.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.CSharp.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.Managed.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.exe.config" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\vbc.rsp" />
+    <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\tools\RoslynLatest\VBCSCompiler.exe.config" />
+    <Content Include="packages\WhatsAppAPI.15.4.29\.signature.p7s" />
+    <Content Include="packages\WhatsAppAPI.15.4.29\WhatsAppAPI.15.4.29.nupkg" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Stellar-master\.gitignore" />
+    <Content Include="Stellar-master\CHANGELOG.md" />
+    <Content Include="Stellar-master\css\style.css.map" />
+    <Content Include="Stellar-master\Design\Open_Sans_font.zip" />
+    <Content Include="Stellar-master\Design\Stellar free_Dashboard.sketch" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Stellar-master\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Stellar-master\LICENSE" />
+    <Content Include="Stellar-master\package.json" />
+    <Content Include="Stellar-master\README.md" />
+    <Content Include="Stellar-master\scss\components\_settings-panel.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_chartist.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_datepicker.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_listify.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_progressbar-js.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_pws-tabs.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_select2.scss" />
+    <Content Include="Stellar-master\scss\light\components\plugin-overrides\_typeahead.scss" />
+    <Content Include="Stellar-master\scss\light\_variables.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_buttons.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_cards.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_checkbox-radio.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_dropdown.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_forms.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_icons.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_lists.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_modals.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_pagination.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_preview.scss" />
+    <Content Include="Stellar-master\scss\shared\components\_tables.scss" />
+    <Content Include="Stellar-master\scss\shared\landing-screens\_auth.scss" />
+    <Content Include="Stellar-master\scss\shared\mixins\_animation.scss" />
+    <Content Include="Stellar-master\scss\shared\mixins\_blockqoute.scss" />
+    <Content Include="Stellar-master\scss\shared\mixins\_buttons.scss" />
+    <Content Include="Stellar-master\scss\shared\mixins\_cards.scss" />
+    <Content Include="Stellar-master\scss\shared\mixins\_misc.scss" />
+    <Content Include="Stellar-master\scss\shared\mixins\_pagination.scss" />
+    <Content Include="Stellar-master\scss\shared\_demo.scss" />
+    <Content Include="Stellar-master\scss\shared\_fonts.scss" />
+    <Content Include="Stellar-master\scss\shared\_footer.scss" />
+    <Content Include="Stellar-master\scss\shared\_functions.scss" />
+    <Content Include="Stellar-master\scss\shared\_misc.scss" />
+    <Content Include="Stellar-master\scss\shared\_reset.scss" />
+    <Content Include="Stellar-master\scss\shared\_typography.scss" />
+    <Content Include="Stellar-master\scss\shared\_utilities.scss" />
+    <Content Include="Stellar-master\scss\style.scss" />
+    <Content Include="Stellar-master\scss\vertical\_vertical-wrapper.scss" />
+    <Content Include="Stellar-master\scss\_dashboard.scss" />
+    <Content Include="Stellar-master\scss\_navbar.scss" />
+    <Content Include="Stellar-master\scss\_sidebar.scss" />
+    <Content Include="Stellar-master\scss\_variables.scss" />
+    <Content Include="Stellar-master\vendors\chartist\chartist.min.js.map" />
+    <Content Include="Stellar-master\vendors\js\bootstrap.min.js.map" />
+    <Content Include="Stellar-master\vendors\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Stellar-master\vendors\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Stellar-master\vendors\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Stellar-master\vendors\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="CarImages\" />
+    <Folder Include="EmployeesImages\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="PartImage\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55078</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55078/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

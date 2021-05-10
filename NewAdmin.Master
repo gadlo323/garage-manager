@@ -1,0 +1,250 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NewAdmin.master.cs" Inherits="GargeManger.NewAdmin"  %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>מנהל מערכת</title>
+    <!-- plugins:css -->
+   <link href="imegas/faviconadmin.ico" rel="icon" type="image/x-icon" />
+    <link href="Stellar-master/vendors/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="Stellar-master/vendors/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />
+   <link href="Stellar-master/vendors/css/vendor.bundle.base.css" rel="stylesheet" />
+   
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+   <link href="Stellar-master/vendors/daterangepicker/daterangepicker.css" rel="stylesheet" />
+   <link href="Stellar-master/vendors/chartist/chartist.min.css" rel="stylesheet" />
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    
+    <!-- End plugin css for this page -->
+    
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link href="Stellar-master/css/style.css" rel="stylesheet" />
+    <link href="css/Clook.css" rel="stylesheet" />
+    <!-- End layout styles -->
+  
+  <noscript>אתר זה עובד יותר טוב עם javascript פועל...</noscript>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+    
+<body dir="rtl">
+       <div id="preloader"> 
+            <div id="status"></div> 
+       </div>
+      <div class="container-scroller">
+
+      <!-- partial:partials/_navbar.html -->
+     <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="navbar-brand-wrapper d-flex align-items-center">
+          <a class="navbar-brand brand-logo" href="Admin2HomePage.aspx">
+            <img src="Stellar-master/images/logo-mini.svg" alt="logo" class="logo-dark" />
+
+             
+          </a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="Stellar-master/images/logo-mini.svg" alt="logo" /></a>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-center flex-grow-1">
+          <h5 class="mb-0 font-weight-medium d-none d-lg-flex">  <asp:Label ID="user_name"  runat="server" Text="" Font-Size="25px"  Italic="true" ></asp:Label></h5>
+          <ul class="navbar-nav navbar-nav-right ml-auto">
+          <%--  <li class="nav-item"><a href="#" class="nav-link"><i class="icon-basket-loaded"></i></a></li>
+            <li class="nav-item"><a href="#" class="nav-link"><i class="icon-chart"></i></a></li>--%>
+            <li class="nav-item dropdown">
+              <a class="nav-link count-indicator message-dropdown" id="messageDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                <i class=" icon-drawer" title="כרטיסי עבודה"></i>
+                <span id="Count2" runat="server" class="count"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="messageDropdown">
+                <a class="dropdown-item py-3">
+                  <p class="mb-0 font-weight-medium float-left"> כרטיסי עבודה פתוחים <span id="Count" runat="server"></span></p>
+                <a href="RepairJob.aspx"<span class="badge badge-pill badge-primary float-right">ראה הכול </span></a>
+                </a>
+                <div class="dropdown-divider"></div>
+                  <asp:Repeater ID="Open_WordCaed" runat="server">
+                       <ItemTemplate>
+                <a class="dropdown-item preview-item" target="_blank" href="RepairJob.aspx">
+                  <div class="preview-thumbnail">
+                    <img src="imegas/icon.png" alt="icon" class="img-sm profile-pic"> </div>
+                  <div class="preview-item-content flex-grow py-2" dir="rtl">
+                    <p class="preview-subject ellipsis font-weight-medium text-dark"  dir="rtl"><strong><%#Eval("License_Number") %></strong></p>
+                    <p class="font-weight-light small-text"  dir="rtl">
+                        <%#Eval("StartDate") %>
+                    </p>    
+                  </div>
+                </a>
+                            </ItemTemplate>
+                      </asp:Repeater>
+              </div>
+            </li>
+           
+            <li class="nav-item dropdown d-none d-xl-inline-flex user-dropdown">
+              <a class="nav-link dropdown-toggle" id="UserDropdown" href="#" data-toggle="dropdown" aria-expanded="false">
+                  <asp:Image ID="Image1" runat="server"  ImageUrl="\Stellar-master\images\faces-clipart\pic-1.png" aalt="image" class="img-xs rounded-circle ml-2" /><span class="font-weight-normal"><asp:Label ID="user_name3" class="badge badge-warning" runat="server" Text="Label" Font-Size="20px" ></asp:Label> </span></a>
+              <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
+                <div class="dropdown-header text-center">
+                  <asp:Image ID="Image2" runat="server" ImageUrl="~/imegas/navbarimg/avatar.png" aalt="image" class="img-xs rounded-circle ml-2" />
+                  <p class="mb-1 mt-3"><asp:Label ID="user_name2"  runat="server" Text="Label" Font-Size="20px" ></asp:Label></p>
+                  <a class="font-weight-light text-muted mb-0" target="_blank" href="https://accounts.google.com/ServiceLogin/identifier?service=mail&passive=true&rm=false&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1&flowName=GlifWebSignIn&flowEntry=AddSession"><asp:Label ID="Useremail" class="btn btn-outline-primary"  runat="server" Text="Label" Font-Size="15px"> </asp:Label></a>                               
+                </div>
+                <a href="ProfileSettingAdmin.aspx" class="dropdown-item"><i class="dropdown-item-icon icon-user text-primary"></i>&nbsp;&nbsp;הפרופיל שלי<span class="badge badge-pill badge-danger">1</span></a>
+               <%-- <a class="dropdown-item"><i class="dropdown-item-icon icon-speech text-primary"></i>&nbsp;&nbsp; הודעות </a>--%>
+                <a class="dropdown-item" href="UpdaetUserPassword.aspx"><i class="dropdown-item-icon icon-energy text-primary"></i>&nbsp;&nbsp;סיסמא חדשה</a>
+                <a class="dropdown-item" href="GarageSettings.aspx" > <i class="dropdown-item-icon icon-question text-primary"></i>&nbsp;&nbsp; הגדרות המוסך </a>
+                <a class="dropdown-item" > <i class="dropdown-item-icon icon-logout text-primary"></i><input type="button" id="signOut" causesvalidation="false" runat="server"  onserverclick="logOut_Click"    value="התנתק/י" class="btn btn-outline-dark btn-sm" style="border:hidden;" /></a>
+              </div>
+            </li>
+          </ul>
+          <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+            <span class="icon-menu"></span>
+          </button>
+          <span dir="ltr" class="clock"></span>
+            <div class="float-sm-left" >
+                 <asp:Label ID="City_Name"   runat="server" Text="lable" Font-Size="17px"  Italic="true" ></asp:Label>
+                <asp:Label ID="City_Name_Hebrwo" runat="server"  Font-Size="0px"  Italic="true" ></asp:Label>
+                <img src="#" class="icon" />
+                <p class="weather"></p>
+            </div>
+             <span id="date" ></span>
+        </div>
+          
+      </nav>
+      <!-- partial -->
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_sidebar.html -->
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+             <li class="nav-item nav-profile">
+              <a href="ProfileSettingAdmin.aspx" class="nav-link">
+                <div class="profile-image">
+                   <asp:Image ID="Image3" runat="server"  ImageUrl="/imegas/navbarimg/avatar.png" aalt="image" class="img-xs rounded-circle ml-2" />
+                  <div class="dot-indicator bg-success"></div>
+                </div>
+                <div class="text-wrapper">
+                  <p class="profile-name"><asp:Label ID="UserName4"  runat="server" Text="Label" Font-Size="20px" ></asp:Label></p>
+                  <p class="designation">Administrator</p>
+                </div>
+                <div class="icon-container">
+                  <i class="icon-bubbles"></i>
+                  <div class="dot-indicator bg-danger"></div>
+                </div>
+              </a>
+            </li>
+            <li class="nav-item nav-category">
+              <span class="nav-link">מנהל-מערכת</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Admin2HomePage.aspx">
+                 <i class="icon-screen-desktop menu-icon"></i>
+                <span class="menu-title">פאנל ניהול</span>
+              </a>
+            </li>
+            <li class="nav-item nav-category"><span class="nav-link">תוספים</span></li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="icon-people menu-icon"></i>
+                  <span class="menu-title">רשימת לקחות</span>
+              </a>
+              <div class="collapse" id="ui-basic" dir="ltr">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="AddCustomer.aspx">הוסף לקוח</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="Shwo_All_Customer.aspx">רשימת כול הלקוחות</a></li>
+               <%--     <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">הוסף רכב ללקוח קיים</a></li>--%>
+                </ul>
+              </div>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic2" aria-expanded="false" aria-controls="ui-basic">
+                <i class="icon-plus menu-icon"></i>
+                  <span class="menu-title">יצירה</span>
+              </a>
+              <div class="collapse" id="ui-basic2" dir="ltr">
+                <ul class="nav flex-column sub-menu">
+               <%--   <li class="nav-item"> <a class="nav-link" href="AddEmployee.aspx">הוסף עובד</a></li>--%>
+                <%--  <li class="nav-item"> <a class="nav-link" href="NewTretmant.aspx">הוסף סוגי טיפול</a></li>--%>
+                  <li class="nav-item"> <a class="nav-link" href="NewPart.aspx">הוסף חלקים למלאי</a></li>
+                </ul>
+              </div>
+            </li>
+          <%--  <li class="nav-item">
+              <a class="nav-link" href="pages/icons/simple-line-icons.html">
+                  <i class=" icon-list menu-icon"></i>
+                  <span class="menu-title">רשימת חלקים</span>
+              </a>
+            </li>--%>
+            <li class="nav-item">
+              <a class="nav-link" href="TreatmentHistory.aspx">
+                  <i class="icon-book-open menu-icon"></i>
+                  <span class="menu-title">היסטורית טיפולים</span>
+              </a>
+            </li>
+           <%-- <li class="nav-item">
+              <a class="nav-link" href="employeesaspx.aspx">
+                  <i class="icon-chart menu-icon"></i>
+                  <span class="menu-title">עובדים </span>
+              </a>
+            </li>--%>
+            <li class="nav-item">
+              <a class="nav-link"  href="WorkCard.aspx">
+                   <i class="icon-grid menu-icon"></i>
+                  <span class="menu-title">כרטיס עבודה חדש</span>
+              </a>
+            </li>
+           <%-- <li class="nav-item nav-category"><span class="nav-link">מיוחדות</span></li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                  <i class="icon-doc menu-icon"></i>
+                  <span class="menu-title">חבילות טיפולים</span>
+              </a>
+              <div class="collapse" id="auth" dir="ltr">
+                <ul class="nav flex-column sub-menu" >
+                    <!--class="nav-item"-->
+                    <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> טיפול שנתי</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> טיפול חורף</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html">  לפני/אחרי קנייה </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> הכנה לטסט </a></li>
+                </ul>
+              </div>
+            </li>--%>
+          
+          </ul>
+        </nav>
+         
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder> 
+      </div>
+    </div> 
+       
+   
+     
+    <!-- <script src="Stellar-master/vendors/js/vendor.bundle.base.js"></script> -->
+    <!-- inject:js -->
+   <script src="Stellar-master/js/off-canvas.js"></script>
+   <script src="Stellar-master/js/misc.js"></script>
+    <!-- endinject -->
+    <!-- Custom js for this page -->
+   <!-- <script src="Stellar-master/js/dashboard.js"></script>-->
+ 
+    <!-- plugins:js -->
+  <script src="js/wetaher.js"></script>
+  
+  <script type="text/javascript">
+      $(document).ready(function () {
+  
+
+      });
+  </script>
+   
+</body>
+</html>
+

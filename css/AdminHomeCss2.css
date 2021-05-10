@@ -1,0 +1,84 @@
+﻿#btnNew {
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: cursive;
+    background: #f0d2d7;
+    float:left;
+    margin:5px;
+   
+}
+
+.box {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    cursor: pointer;
+    display: inline-block;
+    cursor:pointer;
+    
+    
+}
+.green{
+    background:#b3ffe6;
+
+}
+.pink{
+    background:#ffccff;
+}
+.peach{
+    background:#ffd6cc;
+
+}
+.blue{
+    background:#84dcf4;
+}
+.sticky {
+    width: 200px;
+    height: 180px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    box-shadow: 6px 6px 3px gray;
+    float:left;
+    cursor: pointer;
+}
+    .sticky textarea {
+        width: 95%;
+        height: 95%;
+        font-size: 20px;
+        border: none;
+        background: transparent;
+        resize:none;
+        overflow:hidden;
+        font-family: cursive;
+       
+    }
+    .sticky textarea:focus
+    {
+       outline:none;
+    }
+.ui-icon-trash {
+    float: left;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+.ui-icon-check {
+   
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    cursor: pointer;
+}
+.container-notes{
+    display:flex !important;
+    flex-wrap:wrap !important;
+}
+
+
+   /*Calnder CSS*/
+

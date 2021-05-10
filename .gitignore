@@ -338,3 +338,24 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Web.Release.config
+/Web.config
+/Web.Debug.config
+/abouus
+/AddCustomerAdmin
+/Calendar
+/CarImages
+/colorlib-regform-2
+/contactform
+/EmailTamplate
+/font
+/imegas
+/login
+/PartImage
+/Properties
+/RegistraionForm
+/skins
+/Stellar-master
+/Userimage
+/vendor
+/Verification
